@@ -147,16 +147,6 @@ window.LivewireUIModal = () => {
         setShowPropertyTo(show) {
             this.show = show;
 
-            if (show) {
-                document.body.classList.add('overflow-y-hidden');
-            } else {
-                document.body.classList.remove('overflow-y-hidden');
-
-                setTimeout(() => {
-                    this.activeComponent = false;
-                    this.$wire.resetState();
-                }, 300);
-            }
         },
         init() {
             this.modalWidth = this.getActiveComponentModalAttribute('maxWidthClass');
